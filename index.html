@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>NKARGO – Traemos el mundo hasta tu puerta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google font: Nunito resembles Avenir Next and is free to use -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="#inicio" class="logo-icon">
+          <!-- NKARGO brand icon built as an inline SVG following the brand book guidelines -->
+          <svg class="icon" viewBox="0 0 100 100" aria-hidden="true">
+            <!-- The upper arc is open to suggest movement and direction -->
+            <path d="M50 5a45 45 0 1 0 45 45" fill="var(--primary-color)"></path>
+            <!-- Diagonal lines inside the circle evoke logistics routes -->
+            <path d="M28 66 L72 34 M23 55 L65 25" stroke="var(--primary-color)" stroke-width="12" stroke-linecap="round" fill="none"></path>
+          </svg>
+          <span class="logo-text"><span class="n">N</span><span class="k">K</span>ARGO</span>
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#por-que">¿Por qué NKARGO?</a></li>
+        <li><a href="#procesos">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#cotizar" class="btn btn-primary nav-cta">Cotiza tu envío</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section with background image from the brand book -->
+    <section id="inicio" class="hero" style="background-image: url('images/hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Traemos el mundo hasta tu puerta</h1>
+        <p>Soluciones logísticas integrales con precisión, trazabilidad y cero excusas.</p>
+        <div class="hero-cta">
+          <a href="#cotizar" class="btn btn-primary">Cotiza tu envío</a>
+          <a href="#seguimiento" class="btn btn-secondary">Rastrea tu carga</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services container">
+      <h2>Nuestros Servicios</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fa-solid fa-plane-up service-icon" aria-hidden="true"></i>
+          <h3>Transporte Aéreo</h3>
+          <p>Envíos rápidos y seguros por vía aérea a destinos internacionales.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-ship service-icon" aria-hidden="true"></i>
+          <h3>Transporte Marítimo</h3>
+          <p>Consolidación y transporte marítimo para grandes volúmenes con trazabilidad total.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-truck-moving service-icon" aria-hidden="true"></i>
+          <h3>Transporte Terrestre</h3>
+          <p>Distribución local eficiente y puntual hasta la puerta de tu negocio.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-warehouse service-icon" aria-hidden="true"></i>
+          <h3>Almacenamiento &amp; Consolidación</h3>
+          <p>Almacenes propios y seguros para la consolidación estratégica de tu mercancía.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="por-que" class="why section-dark">
+      <div class="container">
+        <h2>¿Por qué elegir NKARGO?</h2>
+        <div class="why-cards">
+          <div class="why-card">
+            <i class="fa-solid fa-globe service-icon" aria-hidden="true"></i>
+            <h3>Cobertura Global</h3>
+            <p>Operamos con alcance internacional, conectando múltiples países de forma eficiente.</p>
+          </div>
+          <div class="why-card">
+            <i class="fa-solid fa-bolt service-icon" aria-hidden="true"></i>
+            <h3>Eficiencia y Puntualidad</h3>
+            <p>Procesos optimizados que garantizan entregas a tiempo y sin improvisaciones.</p>
+          </div>
+          <div class="why-card">
+            <i class="fa-solid fa-users service-icon" aria-hidden="true"></i>
+            <h3>Atención 24/7</h3>
+            <p>Soporte profesional y comunicación transparente durante todo el proceso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="procesos" class="process container">
+      <h2>¿Cómo funciona?</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Cotiza</h3>
+          <p>Ingresa los detalles de tu envío y recibe una cotización inmediata.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Prepara</h3>
+          <p>Empaca y prepara tu mercancía siguiendo nuestras recomendaciones.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Envío</h3>
+          <p>Nos encargamos del transporte internacional y seguimiento en tiempo real.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Entrega</h3>
+          <p>Recibe tu carga en la puerta de tu casa u oficina con total puntualidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contacto" class="cta section-dark">
+      <div class="container cta-content">
+        <h2>¿List@ para recibir tu mercancía?</h2>
+        <p>Procesos limpios, comunicación clara y soporte profesional.</p>
+        <a href="#cotizar" class="btn btn-primary">Cotiza tu envío</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <a href="#inicio" class="logo-icon small">
+          <svg class="icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 5a45 45 0 1 0 45 45" fill="var(--primary-color)"></path>
+            <path d="M28 66 L72 34 M23 55 L65 25" stroke="var(--primary-color)" stroke-width="12" stroke-linecap="round" fill="none"></path>
+          </svg>
+          <span class="logo-text"><span class="n">N</span><span class="k">K</span>ARGO</span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#por-que">¿Por qué NKARGO?</a>
+        <a href="#procesos">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NKARGO. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

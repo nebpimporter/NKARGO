@@ -1,0 +1,443 @@
+/*
+  NKARGO Website Stylesheet
+  This stylesheet defines the visual language of the NKARGO web prototype.
+  Colors, typography and layout reflect the guidelines extracted from the
+  brand book: a professional and elegant appearance with clear calls to action.
+*/
+
+/* CSS variables for easy theming */
+:root {
+  --primary-color: #F45A20; /* Naranja primario del brand book */
+  --dark-bg: #333333;       /* Fondo general y cabeceras */
+  --text-dark: #000000;     /* Negro para titulares y texto principal */
+  --text-light: #FFFFFF;    /* Blanco para contraste en fondos oscuros */
+  --card-bg: #FFFFFF;       /* Fondo de tarjetas claras */
+  --card-dark-bg: #2a2a2a;  /* Fondo de tarjetas en secciones oscuras */
+  --border-radius: 8px;
+  --transition: 0.3s ease;
+  font-size: 16px;
+}
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--card-bg);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.header {
+  background-color: var(--dark-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.logo-icon .logo-text .n {
+  color: var(--text-light);
+}
+.logo-icon .logo-text .k {
+  color: var(--primary-color);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: var(--text-light);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.nav-cta {
+  margin-left: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  /* darken the image for contrast */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.hero-cta .btn {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-bg);
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .service-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-bg);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+/* Why Section (dark) */
+.section-dark {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  padding: 4rem 0;
+}
+
+.why h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.why-card {
+  background-color: var(--card-dark-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.why-card .service-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* Process Section */
+.process {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-bg);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-bg);
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.cta-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #dddddd;
+}
+
+.cta .btn {
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  color: var(--text-light);
+  padding-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-logo .logo-icon {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-logo .logo-text .n {
+  color: var(--text-light);
+}
+.footer-logo .logo-text .k {
+  color: var(--primary-color);
+}
+
+.footer-links a {
+  margin-right: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.footer-social a {
+  margin-right: 1rem;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333333;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .service-card,
+  .why-card,
+  .step {
+    padding: 1.5rem 1rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
