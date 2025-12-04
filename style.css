@@ -1,24 +1,29 @@
 /*
   NKARGO Website Stylesheet
-  This stylesheet defines the visual language of the NKARGO web prototype.
-  Colors, typography and layout reflect the guidelines extracted from the
-  brand book: a professional and elegant appearance with clear calls to action.
+  Colores, tipografía y layout basados en el brand book.
 */
 
-/* CSS variables for easy theming */
+/* Logo en header */
+.logo img {
+  height: 40px;        /* Ajusta el tamaño del logo */
+  width: auto;
+  display: block;
+}
+
+/* Variables de tema */
 :root {
   --primary-color: #F45A20; /* Naranja primario del brand book */
-  --dark-bg: #333333;       /* Fondo general y cabeceras */
-  --text-dark: #000000;     /* Negro para titulares y texto principal */
-  --text-light: #FFFFFF;    /* Blanco para contraste en fondos oscuros */
-  --card-bg: #FFFFFF;       /* Fondo de tarjetas claras */
-  --card-dark-bg: #2a2a2a;  /* Fondo de tarjetas en secciones oscuras */
+  --dark-bg: #333333;       /* Fondos oscuros (header, secciones dark) */
+  --text-dark: #000000;
+  --text-light: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --card-dark-bg: #2a2a2a;
   --border-radius: 8px;
   --transition: 0.3s ease;
   font-size: 16px;
 }
 
-/* Reset some default styles */
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,11 +31,12 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
   background-color: var(--card-bg);
   overflow-x: hidden;
+  scroll-behavior: smooth; /* scroll suave a las secciones */
 }
 
 a {
@@ -48,7 +54,10 @@ ul {
   padding: 0 1rem;
 }
 
-/* Navigation */
+/* =========================
+   NAVBAR / HEADER
+   ========================= */
+
 .header {
   background-color: var(--dark-bg);
   position: sticky;
@@ -63,22 +72,7 @@ ul {
   height: 70px;
 }
 
-.logo-icon {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-light);
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-
-.logo-icon .logo-text .n {
-  color: var(--text-light);
-}
-.logo-icon .logo-text .k {
-  color: var(--primary-color);
-}
-
+/* Menú principal */
 .nav-menu {
   display: flex;
   gap: 1.5rem;
@@ -95,11 +89,15 @@ ul {
   color: var(--primary-color);
 }
 
+/* CTA del header */
 .nav-cta {
   margin-left: 1rem;
 }
 
-/* Buttons */
+/* =========================
+   BOTONES
+   ========================= */
+
 .btn {
   display: inline-block;
   padding: 0.6rem 1.5rem;
@@ -130,7 +128,10 @@ ul {
   color: var(--text-light);
 }
 
-/* Hero Section */
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
   position: relative;
   min-height: 90vh;
@@ -143,12 +144,8 @@ ul {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.55);
-  /* darken the image for contrast */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* oscurece la imagen para contraste */
 }
 
 .hero-content {
@@ -175,7 +172,10 @@ ul {
   margin-top: 0.5rem;
 }
 
-/* Services Section */
+/* =========================
+   SERVICIOS
+   ========================= */
+
 .services {
   padding: 4rem 0;
   text-align: center;
@@ -224,7 +224,10 @@ ul {
   color: #555555;
 }
 
-/* Why Section (dark) */
+/* =========================
+   SECCIÓN "WHY" (OSCURA)
+   ========================= */
+
 .section-dark {
   background-color: var(--dark-bg);
   color: var(--text-light);
@@ -274,7 +277,10 @@ ul {
   color: #cccccc;
 }
 
-/* Process Section */
+/* =========================
+   PROCESO
+   ========================= */
+
 .process {
   padding: 4rem 0;
   text-align: center;
@@ -331,7 +337,10 @@ ul {
   color: #555555;
 }
 
-/* CTA Section */
+/* =========================
+   CTA / CONTACTO
+   ========================= */
+
 .cta {
   text-align: center;
   padding: 4rem 0;
@@ -353,91 +362,139 @@ ul {
   margin-top: 1rem;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
+
 .footer {
-  background-color: #1f1f1f;
-  color: var(--text-light);
-  padding-top: 2rem;
+  background: #1C1C1C;
+  color: #ffffff;
+  padding: 32px 0 18px;
+  margin-top: 80px;
 }
 
-.footer-content {
+.footer-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding-bottom: 2rem;
+  gap: 32px;
 }
 
-.footer-logo .logo-icon {
-  color: var(--text-light);
-  font-size: 1.5rem;
+.footer-logo-img {
+  height: 50px;      /* tamaño del logo en el footer */
+  width: auto;
+  display: block;
+}
+
+/* Links centro */
+.footer-nav {
   display: flex;
-  align-items: center;
-  gap: 0.3rem;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.footer-logo .logo-text .n {
-  color: var(--text-light);
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
-.footer-logo .logo-text .k {
+
+.footer-nav a:hover {
+  opacity: 1;
   color: var(--primary-color);
 }
 
-.footer-links a {
-  margin-right: 1.5rem;
-  color: var(--text-light);
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: var(--primary-color);
+/* Redes derecha */
+.footer-social {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
 }
 
 .footer-social a {
-  margin-right: 1rem;
-  color: var(--text-light);
+  color: #ffffff;
   font-size: 1.2rem;
-  transition: var(--transition);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-social a:hover {
+  opacity: 1;
   color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
+/* Copy */
 .footer-bottom {
-  border-top: 1px solid #333333;
+  margin-top: 20px;
   text-align: center;
-  padding: 1rem 0;
   font-size: 0.8rem;
+  color: #aaaaaa;
 }
 
-/* Responsive adjustments */
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 768px) {
+  /* Navbar */
   .navbar {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    padding: 0.5rem 0;
+    height: auto;
   }
+
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
   }
+
+  .nav-cta {
+    margin-left: 0;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 70vh;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
+  /* Tarjetas */
   .service-card,
   .why-card,
   .step {
     padding: 1.5rem 1rem;
   }
-  .footer-content {
+
+  /* Footer */
+  .footer-row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
   }
 }
