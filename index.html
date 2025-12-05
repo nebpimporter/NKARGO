@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>NKARGO – Soluciones logísticas integrales hacia Colombia</title>
+  <title>NKARGO – SSoluciones logísticas internacionales</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="128x128" href="images/ICON.png">
@@ -20,6 +20,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="preloader">
+    <div class="preloader-inner">
+      <img src="images/OFICIAL LOGO.png" alt="NKARGO" class="preloader-logo" />
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
   <!-- Header / Navigation -->
   <header class="header">
     <nav class="navbar container">
@@ -417,6 +425,16 @@
     }, { threshold: 0.2 });
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+      // Preloader hide on load
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(() => {
+            preloader.classList.add("hidden");
+          }, 500);
+        }
+      });
   </script>
 </body>
 </html>
