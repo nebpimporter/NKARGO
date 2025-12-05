@@ -19,11 +19,11 @@
 /* Variables de tema */
 :root {
   --primary-color: #F45A20; /* Naranja primario del brand book */
-  --dark-bg: #333333;       /* Fondos oscuros (header, secciones dark) */
+  --dark-bg: #1A1A1A;       /* Fondos oscuros (header, secciones dark) */
   --text-dark: #000000;
   --text-light: #FFFFFF;
   --card-bg: #FFFFFF;
-  --card-dark-bg: #2a2a2a;
+  --card-dark-bg: #222222;
   --border-radius: 8px;
   --transition: 0.3s ease;
   font-size: 16px;
@@ -87,6 +87,8 @@ main section[id] {
   justify-content: space-between;
   height: 76px;
   padding: 0 1.8rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* Menú principal */
@@ -185,7 +187,7 @@ main section[id] {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* oscurece la imagen para contraste */
+  background: rgba(0,0,0,0.62); /* oscurece la imagen para contraste */
 }
 
 .hero-content {
@@ -261,6 +263,22 @@ main section[id] {
   letter-spacing: -0.5px;
 }
 
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+}
+
 .services-group {
   margin-bottom: 3rem;
   text-align: left;
@@ -284,6 +302,8 @@ main section[id] {
   border-radius: 18px;
   padding: 2.1rem 1.8rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
   transition: var(--transition);
   text-align: left;
   border: 1px solid rgba(0,0,0,0.04);
@@ -348,7 +368,7 @@ main section[id] {
   border-radius: var(--border-radius);
   padding: 2rem 1.5rem;
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.22);
   transition: var(--transition);
   border: 1px solid rgba(255,255,255,0.06);
 }
@@ -403,7 +423,7 @@ main section[id] {
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.03);
   border-radius: 18px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .stat-card:hover {
@@ -451,6 +471,7 @@ main section[id] {
   border-radius: var(--border-radius);
   padding: 2rem 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,0.05);
   text-align: center;
   transition: var(--transition);
 }
@@ -645,7 +666,7 @@ main section[id] {
    ========================= */
 
 .footer {
-  background: #1C1C1C;
+  background: #111111;
   color: #ffffff;
   padding: 32px 0 18px;
   margin-top: 80px;
@@ -706,7 +727,7 @@ main section[id] {
 .footer-social a:hover {
   opacity: 1;
   color: var(--primary-color);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* Copy */
@@ -748,9 +769,9 @@ main section[id] {
   opacity: 0;
   transform: translateY(45px) scale(0.98);
   filter: blur(6px);
-  transition: opacity 0.9s ease-out, 
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.9s ease-out;
+  transition: opacity 0.75s ease-out,
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s ease-out;
 }
 
 /* Estado visible */
