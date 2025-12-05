@@ -914,23 +914,30 @@ main section[id] {
    ========================= */
 
 @media (max-width: 768px) {
+  /* Ajustes globales mobile */
+  body {
+    font-size: 15px;
+    padding-bottom: 90px; /* deja espacio para la barra inferior de iOS */
+  }
   /* Navbar */
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    height: auto;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    height: 64px;
   }
 
   .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-cta {
-    margin-left: 0;
+    display: none; /* evitamos CTA duplicado en mobile */
   }
 
   .about {
@@ -997,10 +1004,7 @@ main section[id] {
      ========================= */
 
   /* Header más compacto */
-  .navbar {
-    height: 64px;
-    padding: 0 1rem;
-  }
+  /* (navbar block removed to avoid duplicate/override) */
 
   .logo img {
     height: 32px;
@@ -1074,6 +1078,8 @@ main section[id] {
   .industry-tags span {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 
   /* Testimonials */
