@@ -54,24 +54,34 @@
         <img src="images/OFICIAL LOGO.png" alt="NKARGO logo">
       </div>
 
-      <ul class="nav-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#por-que">¿Por qué NKARGO?</a></li>
-        <li><a href="#procesos">Proceso</a></li>
-        <li><a href="#industrias">Industrias</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <!-- Botón hamburguesa solo para móvil -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <a
-        href="https://wa.me/573124547691?text=Hola%20quiero%20cotizar%20un%20env%C3%ADo%20con%20NKARGO"
-        target="_blank"
-        class="btn btn-primary nav-cta"
-      >
-        Cotiza tu envío
-      </a>
+      <!-- Contenedor de menú + CTA -->
+      <div class="nav-right">
+        <ul class="nav-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#por-que">¿Por qué NKARGO?</a></li>
+          <li><a href="#procesos">Proceso</a></li>
+          <li><a href="#industrias">Industrias</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <a
+          href="https://wa.me/573124547691?text=Hola%20quiero%20cotizar%20un%20env%C3%ADo%20con%20NKARGO"
+          target="_blank"
+          class="btn btn-primary nav-cta"
+        >
+          Cotiza tu envío
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -428,6 +438,8 @@
 </main>
 
   <!-- Opcional: eliminar hashes (#seccion) al recargar para que siempre empiece arriba -->
+</main>
+
   <script>
     if (window.location.hash) {
       history.replaceState(null, null, window.location.pathname);
@@ -454,6 +466,31 @@
           }, 2000);
         }
       });
+  </script>
+  <script>
+    // Toggle menú móvil
+    const navToggle = document.querySelector(".nav-toggle");
+    const navRight  = document.querySelector(".nav-right");
+    const navLinks  = document.querySelectorAll(".nav-menu a");
+
+    if (navToggle && navRight) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = navRight.classList.toggle("open");
+        navToggle.classList.toggle("open", isOpen);
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      // Cerrar menú al hacer clic en un link
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (navRight.classList.contains("open")) {
+            navRight.classList.remove("open");
+            navToggle.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    }
   </script>
 </body>
 </html>
