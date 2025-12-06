@@ -35,6 +35,150 @@
   <meta name="twitter:description" content="Importación, exportación, aduana, courier, marítimo y aéreo con trazabilidad total y operación impecable." />
   <meta name="twitter:image" content="https://nkargosas.com/images/ICON.png?v=1" />
 
+  <!-- SCHEMA ORG NKARGO (Organization + Services) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://nkargosas.com/#organization",
+        "name": "NKARGO",
+        "url": "https://nkargosas.com/",
+        "logo": "https://nkargosas.com/images/OFICIAL%20LOGO.png",
+        "description": "NKARGO es una empresa multinacional de logística internacional con sede en Colombia y bases operativas en Estados Unidos y China. Gestionamos importaciones, exportaciones, courier, transporte marítimo, aéreo y consolidación global con operación impecable, comunicación clara y cero excusas.",
+        "sameAs": [
+          "https://www.instagram.com/nkargo.co/"
+        ],
+        "foundingDate": "2008",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CO",
+          "addressLocality": "Colombia",
+          "description": "Sede oficial de operaciones."
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+57 312 454 7691",
+          "areaServed": ["CO", "US"],
+          "availableLanguage": ["es", "en"]
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Colombia",
+            "description": "Sede oficial, importación, exportación y distribución nacional."
+          },
+          {
+            "@type": "Country",
+            "name": "United States",
+            "description": "Base operativa para almacenamiento, courier, importación y exportación hacia Colombia y otros mercados."
+          },
+          {
+            "@type": "Country",
+            "name": "China",
+            "description": "Logística internacional, consolidación, inspecciones y despacho hacia Estados Unidos y Colombia."
+          }
+        ]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#importacion-colombia",
+        "name": "Logística de importación hacia Colombia",
+        "serviceType": "Logística internacional de importación",
+        "description": "Coordinación integral de importaciones hacia Colombia desde múltiples orígenes, integrando transporte marítimo, aéreo, courier, documentación y aduana.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [{ "@type": "Country", "name": "Colombia" }]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#exportacion-desde-colombia",
+        "name": "Logística de exportación desde Colombia",
+        "serviceType": "Logística internacional de exportación",
+        "description": "Diseño y ejecución de operaciones de exportación desde Colombia hacia múltiples países, incluyendo documentación, consolidación y coordinación marítima o aérea.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [{ "@type": "Country", "name": "Colombia" }]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#courier-internacional",
+        "name": "Courier internacional y paquetería",
+        "serviceType": "Courier internacional",
+        "description": "Recepción de compras, consolidación, envío y nacionalización de paquetería personal y comercial entre Estados Unidos, China y Colombia.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "Colombia" },
+          { "@type": "Country", "name": "United States" }
+        ]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#maritimo",
+        "name": "Transporte marítimo internacional",
+        "serviceType": "Transporte marítimo FCL y LCL",
+        "description": "Coordinación de contenedores completos (FCL) y carga consolidada (LCL) desde puertos clave hacia Colombia, con tiempos y costos optimizados y trazabilidad total.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "Colombia" },
+          { "@type": "Country", "name": "United States" },
+          { "@type": "Country", "name": "China" }
+        ]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#aereo",
+        "name": "Transporte aéreo internacional",
+        "serviceType": "Transporte aéreo de carga",
+        "description": "Envíos urgentes y de alto valor vía aérea con itinerarios eficientes, coordinación puerta a puerta y manejo especializado.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "Colombia" },
+          { "@type": "Country", "name": "United States" }
+        ]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#aduana-documental",
+        "name": "Gestión aduanera y documental",
+        "serviceType": "Servicios de aduana y documentación",
+        "description": "Acompañamiento en OTM, BL/guía, Declaración de Valor, facturas, lista de empaque, seguros y certificaciones para importación y exportación.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [{ "@type": "Country", "name": "Colombia" }]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#bodegas-distribucion",
+        "name": "Almacenaje e inventarios con distribución nacional",
+        "serviceType": "Bodegaje y distribución",
+        "description": "Soluciones de bodega, inventarios y última milla en Colombia integradas a la operación internacional.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [{ "@type": "Country", "name": "Colombia" }]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://nkargosas.com/#consultoria-comercio-exterior",
+        "name": "Consultoría en comercio exterior",
+        "serviceType": "Consultoría en comercio exterior y logística",
+        "description": "Asesoría técnica y estratégica para estructurar y optimizar operaciones de importación y exportación, tanto para empresas como para personas naturales.",
+        "provider": { "@id": "https://nkargosas.com/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "Colombia" },
+          { "@type": "Country", "name": "United States" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- END SCHEMA ORG NKARGO -->
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/ICON.png">
   <link rel="apple-touch-icon" href="images/ICON.png">
